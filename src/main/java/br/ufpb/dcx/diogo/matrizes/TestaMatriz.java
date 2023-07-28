@@ -23,6 +23,7 @@ public class TestaMatriz {
                 matriz[i][j] = elemento;
             }
         }
+        System.out.println();
         System.out.println(geradorMatrizes.imprimirMatriz(matriz));
         entrada.close();
     }

@@ -17,7 +17,15 @@ public class GeradorMatrizes {
     }
 
     public String imprimirMatriz(int[][] matriz) {
-        return Arrays.deepToString(matriz);
+        StringBuilder matrizString = new StringBuilder();
+        for (int[] linha : matriz) {
+            matrizString.append("[ ");
+            for (int elemento : linha) {
+                matrizString.append(elemento).append(". ");
+            }
+            matrizString.append("]\n");
+        }
+        return matrizString.toString();
     }
 
 }
