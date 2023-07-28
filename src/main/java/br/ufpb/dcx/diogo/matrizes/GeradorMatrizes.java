@@ -1,7 +1,5 @@
 package br.ufpb.dcx.diogo.matrizes;
 
-import java.util.Arrays;
-
 public class GeradorMatrizes {
 
     private final int linhas;
@@ -13,6 +11,9 @@ public class GeradorMatrizes {
     }
 
     public int[][] criarMatriz() {
+        if (this.linhas <= 0 || this.colunas <= 0) {
+            throw new IndiceInvalidoException("Indice da matriz inválido");
+        }
         return new int[this.linhas][this.colunas];
     }
 
