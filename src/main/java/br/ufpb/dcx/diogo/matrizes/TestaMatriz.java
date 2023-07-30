@@ -30,7 +30,7 @@ public class TestaMatriz {
             System.out.println(matriz.calcularDeterminante());
 
             entrada.close();
-        } catch (IllegalArgumentException e) {
+        } catch (MatrizNaoQuadradaException e) {
             System.out.println("Erro: " + e.getMessage());
         }
     }

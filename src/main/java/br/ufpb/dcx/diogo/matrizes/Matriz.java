@@ -46,9 +46,9 @@ public class Matriz {
         return transposta;
     }
 
-    public int calcularDeterminante() throws IllegalArgumentException {
+    public int calcularDeterminante() throws MatrizNaoQuadradaException {
         if (linhas != colunas) {
-            throw new IllegalArgumentException("Só é possível calcular o determinante de matrizes quadradas.");
+            throw new MatrizNaoQuadradaException("Só é possível calcular o determinante de matrizes quadradas.");
         }
 
         int n = linhas = colunas;
