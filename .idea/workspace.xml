@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cb694ad-fa9e-4d7a-b548-1ce719be6131" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="9cb694ad-fa9e-4d7a-b548-1ce719be6131" name="Changes" comment="Adição do método calcularTranposta();&#10;Modificação do método imprimirMatriz() para toString();&#10;Método calcularDeterminante() a ser implementado">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/diogo/matrizes/GeradorMatrizes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/diogo/matrizes/GeradorMatrizes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/diogo/matrizes/Matriz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/diogo/matrizes/Matriz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/diogo/matrizes/TestaMatriz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/diogo/matrizes/TestaMatriz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,12 +26,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "voidxzx"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;voidxzx&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -38,6 +39,9 @@
         <option name="url" value="https://github.com/voidxzx/Matrizes.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.jdks/openjdk-20.0.2/lib/src.zip!/java.base/java/lang/String.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="2TB70YyQf9sintl0buiYvKIJxlQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,9 +51,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Diogo/IdeaProjects/Matrizes",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -77,7 +84,31 @@
       <option name="project" value="LOCAL" />
       <updated>1690504929458</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=".">
+      <option name="closed" value="true" />
+      <created>1690507977501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690507977501</updated>
+    </task>
+    <task id="LOCAL-00004" summary=".">
+      <option name="closed" value="true" />
+      <created>1690543923039</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690543923039</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Adição do método calcularTranposta();&#10;Modificação do método imprimirMatriz() para toString();&#10;Método calcularDeterminante() a ser implementado">
+      <option name="closed" value="true" />
+      <created>1690684311532</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690684311532</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +124,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="." />
+    <MESSAGE value="Adição do método calcularTranposta();&#10;Modificação do método imprimirMatriz() para toString();&#10;Método calcularDeterminante() a ser implementado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adição do método calcularTranposta();&#10;Modificação do método imprimirMatriz() para toString();&#10;Método calcularDeterminante() a ser implementado" />
   </component>
 </project>

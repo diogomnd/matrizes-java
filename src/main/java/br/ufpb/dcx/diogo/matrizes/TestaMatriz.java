@@ -6,20 +6,22 @@ public class TestaMatriz {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        int linhas, colunas;
+        int elemento;
 
         try {
             System.out.print("Digite a quantidade de linhas: ");
-            int linhas = entrada.nextInt();
+            linhas = entrada.nextInt();
 
             System.out.print("Digite a quantidade de colunas: ");
-            int colunas = entrada.nextInt();
+            colunas = entrada.nextInt();
 
             Matriz matriz = new Matriz(linhas, colunas);
 
             for (int i = 0; i < linhas; i++) {
                 for (int j = 0; j < colunas; j++) {
                     System.out.printf("Digite o elemento da %sª linha e %sª coluna: ", i + 1, j + 1);
-                    int elemento = entrada.nextInt();
+                    elemento = entrada.nextInt();
                     matriz.setElemento(i, j, elemento);
                 }
             }

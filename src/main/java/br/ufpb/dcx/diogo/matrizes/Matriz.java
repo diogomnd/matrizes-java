@@ -29,7 +29,7 @@ public class Matriz {
             for (int elemento : linha) {
                 matrizString.append(String.format("%3d", elemento)).append(" ");
             }
-            matrizString.append("  ]\n");
+            matrizString.append(" ]\n");
         }
         return matrizString.toString();
     }
