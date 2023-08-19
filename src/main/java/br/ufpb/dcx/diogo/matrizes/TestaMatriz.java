@@ -6,31 +6,41 @@ public class TestaMatriz {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
-        int linhas, colunas;
-        int elemento;
 
         try {
             System.out.print("Digite a quantidade de linhas: ");
-            linhas = entrada.nextInt();
+            int linhas = entrada.nextInt();
 
             System.out.print("Digite a quantidade de colunas: ");
-            colunas = entrada.nextInt();
+            int colunas = entrada.nextInt();
 
             Matriz matriz = new Matriz(linhas, colunas);
 
             for (int i = 0; i < linhas; i++) {
                 for (int j = 0; j < colunas; j++) {
                     System.out.printf("Digite o elemento da %sª linha e %sª coluna: ", i + 1, j + 1);
-                    elemento = entrada.nextInt();
+                    int elemento = entrada.nextInt();
                     matriz.setElemento(i, j, elemento);
                 }
             }
-            System.out.println();
-            System.out.println(matriz);
-            System.out.println(matriz.calcularDeterminante());
+
+            System.out.println("\nMatriz obtida:");
+            System.out.print(matriz);
+
+            System.out.printf("Determinante da matriz obtida: %.3f\n", matriz.calcularDeterminante());
+
+            System.out.println("\nAdjunta da matriz obtida:");
+            System.out.println(matriz.calcularMatrizAdjunta());
+
+            System.out.println("\nInversa da matriz obtida:");
+            System.out.println(matriz.calcularInversa());
+
+            System.out.println("\nMatriz de cofatores obtida:");
+            System.out.println(matriz.calcularMatrizDeCofatores());
 
             entrada.close();
-        } catch (MatrizNaoQuadradaException e) {
+
+        } catch (MatrizNaoQuadradaException | DeterminanteNuloException e) {
             System.out.println("Erro: " + e.getMessage());
         }
     }
