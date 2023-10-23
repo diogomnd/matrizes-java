@@ -1,4 +1,4 @@
-package br.ufpb.dcx.diogo.matrizes;
+package br.ufpb.dcx.matrizes;
 
 public class MatrizNaoQuadradaException extends Exception {
 
