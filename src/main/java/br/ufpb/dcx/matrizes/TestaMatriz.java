@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class TestaMatriz {
 
     public static void main(String[] args) {
-
         boolean sair = false;
         Scanner entrada = new Scanner(System.in);
 
@@ -60,7 +59,7 @@ public class TestaMatriz {
 
                     if (temMatriz) {
                         String menuOperacoes = entrada.nextLine();
-                        while (!menuOperacoes.equals("7")) {
+                        while (!menuOperacoes.equals("6")) {
                             System.out.println("Matriz original:");
                             System.out.println(matrizGerada);
 
@@ -70,9 +69,8 @@ public class TestaMatriz {
                                             "[2] Calcular matriz transposta\n" +
                                             "[3] Calcular matriz de cofatores\n" +
                                             "[4] Calcular matriz adjunta\n" +
-                                            "[5] Escalonar matriz\n" +
-                                            "[6] Calcular matriz inversa\n" +
-                                            "[7] Voltar");
+                                            "[5] Calcular matriz inversa\n" +
+                                            "[6] Voltar");
 
                             menuOperacoes = entrada.nextLine();
                             try {
@@ -95,10 +93,6 @@ public class TestaMatriz {
                                         System.out.println(matrizGerada.calcularMatrizAdjunta());
                                     }
                                     case "5" -> {
-                                        System.out.println("\nMatriz escalonada:");
-                                        System.out.println(matrizGerada.escalonar());
-                                    }
-                                    case "6" -> {
                                         System.out.println("\nCalcular através da matriz " +
                                                 "adjunta ou escalonamento? [1/2]");
                                         String opcao = entrada.nextLine();

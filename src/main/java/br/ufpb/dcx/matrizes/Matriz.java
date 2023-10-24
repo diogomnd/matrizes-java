@@ -7,14 +7,13 @@ import java.util.Random;
 
 /**
  *
- * @author jmath153, diogomnd
+ * @author diogomnd, jmath153
  */
-
 public class Matriz {
 
     private final int linhas;
     private final int colunas;
-    private double[][] matriz;
+    private final double[][] matriz;
 
     public Matriz(int linhas, int colunas) {
         this.linhas = linhas;
@@ -26,10 +25,6 @@ public class Matriz {
         linhas = 0;
         colunas = 0;
         matriz = new double[linhas][colunas];
-    }
-
-    public void setMatriz(double[][] matriz) {
-        this.matriz = matriz;
     }
 
     public double getElemento(int linha, int coluna) {
@@ -118,12 +113,10 @@ public class Matriz {
         if (calcularDeterminanteDouble() == 0)
             throw new DeterminanteNuloException("A matriz não tem inversa, pois o determinante é nulo");
 
-        MatrizInversa matrizInversa = new MatrizInversa();
-
-        Matriz matrizComIdentidade = matrizInversa.juntarMatrizComAIdentidade(this);
+        Matriz matrizComIdentidade = juntarMatrizComAIdentidade(this);
         Matriz escalonada = matrizComIdentidade.escalonar();
 
-        return matrizInversa.separarIdentidade(escalonada);
+        return separarIdentidade(escalonada);
     }
 
     @Override
@@ -194,15 +187,8 @@ public class Matriz {
         return determinante;
     }
 
-    public Matriz escalonar() throws MatrizNaoQuadradaException, DeterminanteNuloException {
-
-        if (linhas != colunas)
-            throw new MatrizNaoQuadradaException("Só é possível escalonar na forma reduzida matrizes quadradas");
-        if (calcularDeterminanteDouble() == 0)
-            throw new DeterminanteNuloException("Não é possível escalonar na forma reduzida matrizes singulares");
-
+    private Matriz escalonar() {
         Escalonador escalonador = new Escalonador();
-
         Matriz matrizEscalonada = new Matriz(getComprimento(), getComprimentoLinha());
         for (int i = 0; i < getComprimento(); i++) {
             for (int j = 0; j < getComprimentoLinha(); j++) {
@@ -210,13 +196,11 @@ public class Matriz {
                 matrizEscalonada.setElemento(i, j, elemento);
             }
         }
-
         escalonador.ordenarLinhas(matrizEscalonada);
 
         for (int i = 0; i < matrizEscalonada.getComprimento(); i++) {
             double pivo = escalonador.encontrarPivo(matrizEscalonada, i);
             int colunaPivo = 0;
-
             for (int j = 0; j < matrizEscalonada.getComprimentoLinha(); j++) {
                 if (matrizEscalonada.getElemento(i, j) == pivo) {
                     colunaPivo = j;
@@ -228,6 +212,54 @@ public class Matriz {
             escalonador.zerarColuna(matrizEscalonada, i, colunaPivo);
         }
         return matrizEscalonada;
+    }
+
+    private Matriz criarIdentidade(Matriz matriz) {
+        int comprimento = matriz.getComprimento();
+        Matriz identidade = new Matriz(comprimento, comprimento);
+        for (int i = 0; i < comprimento; i++) {
+            for (int j = 0; j < comprimento; j++) {
+                if (i == j) {
+                    identidade.setElemento(i, j, 1);
+                } else {
+                    identidade.setElemento(i, j, 0);
+                }
+            }
+        }
+        return identidade;
+    }
+
+    private Matriz juntarMatrizComAIdentidade(Matriz matriz) {
+        int comprimento = matriz.getComprimento();
+        Matriz matrizComIdentidade = new Matriz(comprimento, comprimento * 2);
+        Matriz identidade = criarIdentidade(matriz);
+        for (int i = 0; i < comprimento; i++) {
+            for (int j = 0; j < comprimento; j++) {
+                double elemento = matriz.getElemento(i, j);
+                matrizComIdentidade.setElemento(i, j, elemento);
+            }
+        }
+        for (int k = 0; k < comprimento; k++) {
+            for (int l = comprimento; l < comprimento * 2; l++) {
+                double tmp = identidade.getElemento(k, l - comprimento);
+                matrizComIdentidade.setElemento(k, l, tmp);
+            }
+        }
+        return matrizComIdentidade;
+    }
+
+    private Matriz separarIdentidade(Matriz matriz) {
+        int comprimento = matriz.getComprimento();
+        int comprimentoLinha = matriz.getComprimentoLinha();
+        Matriz inversa = new Matriz(comprimento, comprimentoLinha / 2);
+        int comprimentoInversa = inversa.getComprimento();
+        for (int i = 0; i < comprimentoInversa; i++) {
+            for (int j = 0; j < comprimentoInversa; j++) {
+                double tmp = matriz.getElemento(i, j + comprimentoInversa);
+                inversa.setElemento(i, j, tmp);
+            }
+        }
+        return inversa;
     }
 
 }
