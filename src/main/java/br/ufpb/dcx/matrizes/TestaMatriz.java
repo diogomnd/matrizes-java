@@ -19,8 +19,7 @@ public class TestaMatriz {
                 while (!opcaoGerador.equals("3")) {
                     boolean temMatriz = false;
 
-                    System.out.println(
-                            "\n[1] Inserir matriz\n" +
+                    System.out.println("\n[1] Inserir matriz\n" +
                                     "[2] Gerar Matriz Aleatória\n" +
                                     "[3] Voltar");
                     opcaoGerador = entrada.nextLine();
@@ -59,7 +58,7 @@ public class TestaMatriz {
 
                     if (temMatriz) {
                         String menuOperacoes = entrada.nextLine();
-                        while (!menuOperacoes.equals("6")) {
+                        while (!menuOperacoes.equals("7")) {
                             System.out.println("Matriz original:");
                             System.out.println(matrizGerada);
 
@@ -69,8 +68,9 @@ public class TestaMatriz {
                                             "[2] Calcular matriz transposta\n" +
                                             "[3] Calcular matriz de cofatores\n" +
                                             "[4] Calcular matriz adjunta\n" +
-                                            "[5] Calcular matriz inversa\n" +
-                                            "[6] Voltar");
+                                            "[5] Escalonar matriz\n" +
+                                            "[6] Calcular matriz inversa\n" +
+                                            "[7] Voltar");
 
                             menuOperacoes = entrada.nextLine();
                             try {
@@ -93,6 +93,10 @@ public class TestaMatriz {
                                         System.out.println(matrizGerada.calcularMatrizAdjunta());
                                     }
                                     case "5" -> {
+                                        System.out.println("\nMatriz escalonada:");
+                                        System.out.println(matrizGerada.escalonar());
+                                    }
+                                    case "6" -> {
                                         System.out.println("\nCalcular através da matriz " +
                                                 "adjunta ou escalonamento? [1/2]");
                                         String opcao = entrada.nextLine();
@@ -108,7 +112,6 @@ public class TestaMatriz {
                                             System.out.println(matrizGerada.calcularInversaPorEscalonamento());
                                         }
                                     }
-                                    default -> System.out.println("\nInforme uma opção válida");
                                 }
                             } catch (MatrizNaoQuadradaException | DeterminanteNuloException e) {
                                 System.out.println(e.getMessage());

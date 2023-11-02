@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cb694ad-fa9e-4d7a-b548-1ce719be6131" name="Changes" comment="Versão final">
+    <list default="true" id="9cb694ad-fa9e-4d7a-b548-1ce719be6131" name="Changes" comment="Método escalonar() tornado privado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/DeterminanteNuloException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/DeterminanteNuloException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/Escalonador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/Escalonador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/Matriz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/Matriz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/MatrizInversa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/MatrizNaoQuadradaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/MatrizNaoQuadradaException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/TestaMatriz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/ufpb/dcx/matrizes/TestaMatriz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,10 +75,10 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.TestaMatriz">
     <configuration name="TestaMatriz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.ufpb.dcx.matrizes.TestaMatriz" />
       <module name="junit5-jupiter-starter-maven" />
@@ -140,8 +138,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TesteProva" />
         <item itemvalue="Application.TestaMatriz" />
+        <item itemvalue="Application.TesteProva" />
         <item itemvalue="JUnit.TestMatriz" />
         <item itemvalue="JUnit.TestMatriz.testEquals" />
       </list>
@@ -220,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698105591491</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Método escalonar() tornado privado">
+      <option name="closed" value="true" />
+      <created>1698107762108</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698107762108</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,7 +246,8 @@
     <MESSAGE value="Adição do método calcularTranposta();&#10;Modificação do método imprimirMatriz() para toString();&#10;Método calcularDeterminante() a ser implementado" />
     <MESSAGE value="Implementação de:&#10;- Matriz de Cofatores;&#10;- Remover linhas e colunas;&#10;- Cálculo de determinante;&#10;- Matriz Adjunta;&#10;- Matriz Inversa." />
     <MESSAGE value="Versão final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Versão final" />
+    <MESSAGE value="Método escalonar() tornado privado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Método escalonar() tornado privado" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
